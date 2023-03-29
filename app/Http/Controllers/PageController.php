@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     // creo una public function che gestisca la logica dell'home page
-    public function homepage(){
+    public function index(){
         return view('homepage');
     }
 }
