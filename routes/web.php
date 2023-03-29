@@ -2,6 +2,8 @@
 
 // quando use e' scritto cosi' corrisponde ad una sorta di import
 use Illuminate\Support\Facades\Route;
+// rendo disponibile alla route l'indirizzo del controller lo "faccio notare a route"
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// come dico alla rotta di eseguire le funzioni del controller?
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// passo come argomento un array che dira'[di questa cosa se ne occupa [argomento 1], alla funzione [argomento 2] ]
+
+Route::get('/',[PageController::class, 'homepage']);
+
+// questa parte la sposto nella funzione di PageController
+    // function(){
+// return view('welcome')};
