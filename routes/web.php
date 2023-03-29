@@ -1,5 +1,6 @@
 <?php
 
+// quando use e' scritto cosi' corrisponde ad una sorta di import
 use Illuminate\Support\Facades\Route;
 
 /*
