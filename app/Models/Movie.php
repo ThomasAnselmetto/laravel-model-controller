@@ -13,5 +13,5 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     // questo e' un trait(dentro la classe)
-    use HasFactory;
+    // use HasFactory;
 }

@@ -11,18 +11,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>table</title>
   {{-- Includiamo gli assets con la direttiva @vite --}}
   @vite('resources/js/app.js')
 </head>
 <body>
     <div class="container">
-        <h1 class="my-5 text-center">@yield('h1')</h1>
+        <h1 class="my-5 text-center">...</h1>
         <div class="row row-cols-3 g-3">
             @if (isset($movies))
             @forelse ($movies as $movie)
-                       
+            <div class="col-3">
+              <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Titolo: <strong>{{$movie -> title}}</strong></li>
+                    <li class="list-group-item">Nazionalità: <strong>{{$movie -> original_title}}</strong></li>
+                    <li class="list-group-item">Voto: <strong>{{$movie -> vote}}</strong></li>
+                </ul>
+            </div>
+            </div>
+            @empty   
+            <div class="col-12">
+              <h1>nessun film</h1>
+            </div>
             @endforelse
+            @endif
             
         </div>
     </div>
