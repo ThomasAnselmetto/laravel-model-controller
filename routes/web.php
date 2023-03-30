@@ -21,6 +21,7 @@ use App\Http\Controllers\PageController;
 // possiamo avere un controller per le pagine statiche e un controller che gestisce un modello che viene da DB o set di dati da gestire(best practice)
 Route::get('/',[PageController::class, 'index'])->name('homepage');
 
+// Route::get('details/{id}', [PageController::class, 'detail'])->name('details');
 // questa parte la sposto nella funzione di PageController
     // function(){
 // return view('welcome')};
